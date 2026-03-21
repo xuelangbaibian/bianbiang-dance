@@ -1,0 +1,6 @@
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  site: 'https://baibiandance.netlify.app',
+  compressHTML: false
+});
