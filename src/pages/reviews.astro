@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const reviews = [
+  {
+    name: "小明妈妈",
+    avatar: "👩",
+    rating: 5,
+    content: "孩子在这里学了2年街舞，变化太大了！从以前的内向到现在自信满满，每次表演都主动要求上台。感谢百变街舞的老师们！",
+    course: "少儿街舞进阶"
+  },
+  {
+    name: "小红爸爸",
+    avatar: "👨",
+    rating: 5,
+    content: "选择百变街舞是我做过最正确的决定。老师专业负责，环境也很好。孩子现在 Hip-hop 跳得特别棒！",
+    course: "幼儿街舞启蒙"
+  },
+  {
+    name: "洋洋妈妈",
+    avatar: "👩",
+    rating: 5,
+    content: "强烈推荐！老师非常有耐心，会根据孩子的特点因材施教。考级每次都顺利通过，老师指导得非常好。",
+    course: "中高级进阶"
+  },
+  {
+    name: "轩轩爸爸",
+    avatar: "👨",
+    rating: 5,
+    content: "孩子在百变街舞学习期间，获得了好几次比赛奖项。老师的教学水平真的很高，推荐！",
+    course: "明星特训营"
+  },
+  {
+    name: "琪琪妈妈",
+    avatar: "👩",
+    rating: 5,
+    content: "一开始担心孩子太小跟不上，结果老师说4岁正好。现在孩子每周都吵着要来上课，兴趣是最好的老师！",
+    course: "幼儿街舞启蒙"
+  },
+  {
+    name: "壮壮爸爸",
+    avatar: "👨",
+    rating: 5,
+    content: "环境整洁明亮，设施专业。老师都很有经验，孩子在这里学得很开心我们也放心。",
+    course: "少儿街舞进阶"
+  }
+];
+---
+
+<Layout title="学员评价 - 百变街舞" description="百变街舞学员家长真实评价，看看孩子们在百变街舞的成长变化">
+  <div class="page-header">
+    <div class="container">
+      <h1>学员<span style="color:var(--primary)">评价</span></h1>
+      <p>来自家长的真实反馈</p>
+    </div>
+  </div>
+
+  <section class="section reviews-section">
+    <div class="container">
+      <div class="reviews-stats">
+        <div class="stat-item">
+          <span class="stat-num">4.9</span>
+          <span class="stat-label">综合评分</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">学员家长</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">好评率</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        {reviews.map((review) => (
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">{review.avatar}</div>
+              <div class="review-info">
+                <h3>{review.name}</h3>
+                <span class="review-course">{review.course}</span>
+              </div>
+              <div class="review-rating">
+                {Array.from({ length: review.rating }).map(() => (
+                  <span class="star">⭐</span>
+                ))}
+              </div>
+            </div>
+            <p class="review-content">{review.content}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="reviews-cta">
+        <h2>给孩子一个展示自我的舞台</h2>
+        <p>百变街舞，让每个孩子都能发光发热</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">立即报名</a>
+          <a href="/courses" class="btn btn-outline">查看课程</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    padding: 160px 0 80px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
+  }
+
+  .page-header h1 {
+    font-size: 56px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+  }
+
+  .page-header p {
+    color: var(--gray);
+    font-size: 18px;
+  }
+
+  .reviews-section {
+    background: var(--dark-2);
+  }
+
+  .reviews-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+    padding: 40px;
+    background: var(--dark);
+    border-radius: 20px;
+    border: 1px solid var(--dark-3);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-num {
+    display: block;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--primary);
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: var(--gray);
+    text-transform: uppercase;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .review-card {
+    background: var(--dark);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--dark-3);
+    transition: all 0.3s;
+  }
+
+  .review-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .review-avatar {
+    font-size: 40px;
+  }
+
+  .review-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .review-course {
+    font-size: 13px;
+    color: var(--secondary);
+  }
+
+  .review-rating {
+    margin-left: auto;
+  }
+
+  .star {
+    font-size: 16px;
+  }
+
+  .review-content {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .reviews-cta {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,220,0,0.1), rgba(255,51,102,0.1));
+    border-radius: 30px;
+    padding: 60px 40px;
+    border: 1px solid rgba(255,220,0,0.2);
+  }
+
+  .reviews-cta h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+
+  .reviews-cta p {
+    color: var(--gray);
+    margin-bottom: 30px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: var(--dark);
+  }
+
+  .btn-primary:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+  }
+
+  .btn-outline {
+    border: 2px solid var(--light);
+    color: var(--light);
+  }
+
+  .btn-outline:hover {
+    background: var(--light);
+    color: var(--dark);
+  }
+
+  @media (max-width: 768px) {
+    .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .reviews-stats {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .page-header h1 {
+      font-size: 36px;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

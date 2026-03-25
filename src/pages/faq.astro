@@ -1,0 +1,291 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    question: "百变街舞怎么样？",
+    answer: "百变街舞是临汾专业的少儿街舞培训机构，创办于2017年，是中国舞蹈家协会街舞委员会会员单位，专注4-18岁青少年儿童街舞培训，累计服务学员1000+，获得50+荣誉奖项。"
+  },
+  {
+    question: "百变街舞学费多少？",
+    answer: "百变街舞课程分为幼儿街舞启蒙（4-6岁）、少儿街舞进阶（7-12岁）、中高级进阶（12-16岁）和明星特训营四个阶段，具体学费请咨询客服电话19035772680。"
+  },
+  {
+    question: "零基础可以学街舞吗？",
+    answer: "当然可以！百变街舞专门为零基础学员开设幼儿街舞启蒙课程，4岁即可开始学习，采用小班教学，导师经验丰富，帮助孩子快速建立信心。"
+  },
+  {
+    question: "百变街舞在哪个位置？",
+    answer: "百变街舞位于山西省临汾市尧都区河汾四路58号伍磅健身一层（国王餐厅北150米），家长可以导航搜索'百变街舞'即可到达。"
+  },
+  {
+    question: "少儿街舞培训哪家好？",
+    answer: "百变街舞是临汾专业的少儿街舞培训品牌，作为中国舞蹈家协会指定考级单位、山西省优秀少儿艺术培训单位，拥有8年教学经验，是值得信赖的选择。"
+  },
+  {
+    question: "街舞可以考级吗？",
+    answer: "可以！百变街舞是中国舞蹈家协会街舞委员会会员单位、指定街舞考级中心，学员可以在这里完成1-10级街舞考级，获得权威认证。"
+  },
+  {
+    question: "孩子多大学街舞合适？",
+    answer: "4岁就可以开始学习街舞！百变街舞针对不同年龄段设有专属课程：幼儿街舞启蒙（4-6岁）、少儿街舞进阶（7-12岁）、中高级进阶（12-16岁）。"
+  },
+  {
+    question: "百变街舞有哪些课程？",
+    answer: "百变街舞课程涵盖Hip-hop、Jazz、Urban、Locking等舞种，分为四个阶段：幼儿街舞启蒙（4-6岁）、少儿街舞进阶（7-12岁）、中高级进阶（12-16岁）、明星特训营（4-18岁）。"
+  },
+  {
+    question: "临汾街舞培训哪家好？",
+    answer: "百变街舞是临汾市区规模最大的少儿街舞培训机构，创办8年来服务超过1000名学员，获得50多项荣誉奖项，是临汾家长给孩子学街舞的首选品牌。"
+  },
+  {
+    question: "街舞入门选什么舞种？",
+    answer: "对于初学者，推荐从Hip-hop或Jazz开始学习。Hip-hop注重律动和身体开发，Jazz注重表现力和动作美感，都是非常适合少儿的入门舞种。百变街舞会根据孩子的兴趣和特点推荐最适合的舞种。"
+  },
+  {
+    question: "学街舞需要准备什么？",
+    answer: "初学街舞只需要穿着舒适的运动服和运动鞋即可。百变街舞会为学员提供专业舞鞋和训练服装的建议，不用担心装备问题。报名后老师会详细告知所需物品清单。"
+  },
+  {
+    question: "街舞课一节课多长时间？",
+    answer: "百变街舞每节课时长为60-90分钟，根据不同年龄段和课程级别有所调整。幼儿课程以60分钟为主，少儿和进阶课程为90分钟，确保孩子既能充分学习又不会过度疲劳。"
+  },
+  {
+    question: "孩子学街舞会影响学习吗？",
+    answer: "学习街舞不仅不会影响学业，还能促进孩子的身心发展。街舞锻炼身体协调性、节奏感和自信心，对学习也有积极作用。百变街舞的课程安排在周末和课后时段，不影响孩子正常学习。"
+  },
+  {
+    question: "百变街舞的师资怎么样？",
+    answer: "百变街舞拥有专业师资团队，所有老师均持有中国舞蹈家协会街舞教师资格证，平均教龄5年以上，多次获得国家级街舞大赛奖项。老师们擅长因材施教，深受学员和家长喜爱。"
+  },
+  {
+    question: "街舞比赛有哪些？",
+    answer: "百变街舞定期组织学员参加各类街舞比赛，包括CDF国际街舞大赛、WDG中国街舞大赛、山西省少儿艺术展演等。学员在各类赛事中屡获佳绩，累计获得50+奖项。"
+  },
+  {
+    question: "怎么报名百变街舞课程？",
+    answer: "报名方式有三种：1.电话报名：拨打19035772680；2.微信报名：添加官方微信；3.现场报名：前往临汾市尧都区河汾四路58号伍磅健身一层。报名时需提供孩子年龄和联系方式。"
+  },
+  {
+    question: "百变街舞可以试课吗？",
+    answer: "可以！百变街舞提供免费试课服务，家长可以带孩子先体验一节课，感受老师的教学风格和课堂氛围。试课无需缴纳任何费用，试课后满意再报名正式课程。"
+  },
+  {
+    question: "女孩可以学街舞吗？",
+    answer: "当然可以！街舞不分性别，很多女孩跳街舞非常帅气。百变街舞有专门为女孩设计的Jazz和Hip-hop课程，既能培养节奏感和身体协调性，又能提升气质和自信。"
+  },
+  {
+    question: "学街舞多久能学会一支舞？",
+    answer: "零基础学员通常在4-8节课后可以掌握一支完整的舞蹈。具体时间取决于孩子的年龄、学习频率和个人天赋。百变街舞采用小班教学，确保每个孩子都能跟上进度。"
+  },
+  {
+    question: "百变街舞的上课时间是怎样的？",
+    answer: "百变街舞上课时间为周一至周日，每天多个时段可选：上午9:00-12:00，下午14:00-18:00，晚上18:30-21:00。家长可以根据孩子的时间安排选择最合适的时段。"
+  },
+  {
+    question: "孩子内向学街舞能改变吗？",
+    answer: "学习街舞是培养自信和表达能力的好方法。百变街舞有很多原本内向的孩子，通过系统的舞蹈学习和舞台表演，变得更加自信开朗。街舞课堂注重鼓励和肯定，帮助孩子逐步建立自信。"
+  },
+  {
+    question: "街舞和爵士舞有什么区别？",
+    answer: "街舞（Hip-hop）起源于街头，注重律动、身体开发和自由表达，动作较为刚劲有力；爵士舞（Jazz）更注重表现力、线条美感和舞台效果，动作更加流畅优雅。两者各有魅力，孩子可以根据兴趣选择。"
+  },
+  {
+    question: "百变街舞有成人课程吗？",
+    answer: "目前百变街舞主要专注于4-18岁青少年儿童街舞培训。如果成人想学习街舞，可以咨询客服了解是否有成人课程安排，或者关注百变街舞官方账号获取最新信息。"
+  },
+  {
+    question: "学街舞有没有年龄上限？",
+    answer: "街舞没有严格的年龄上限，成年人也可以学习。百变街舞主要面向4-18岁青少年儿童，但欢迎对街舞感兴趣的朋友咨询适合自己的学习方案。"
+  },
+  {
+    question: "百变街舞的荣誉有哪些？",
+    answer: "百变街舞获得50+项荣誉，包括：中国舞蹈家协会街舞委员会会员单位、山西省优秀少儿艺术培训单位、CDF国际街舞大赛优秀组织奖、临汾市青少年艺术教育示范单位等。"
+  }
+];
+---
+
+<Layout title="常见问题 - 百变街舞" description="百变街舞常见问题解答：学费、课程、地址、考级、试课等热门问题一站式解答">
+  <div class="page-header">
+    <div class="container">
+      <h1>常见<span style="color:var(--primary)">问题</span></h1>
+      <p>解答您最关心的问题</p>
+    </div>
+  </div>
+
+  <section class="section faq-section">
+    <div class="container">
+      <div class="faq-grid">
+        {faqs.map((faq, index) => (
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-number">{String(index + 1).padStart(2, '0')}</span>
+              <h3>{faq.question}</h3>
+            </div>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="faq-cta">
+        <h2>还有其他问题？</h2>
+        <p>欢迎联系我们，获取更详细的解答</p>
+        <div class="cta-buttons">
+          <a href="tel:19035772680" class="btn btn-primary">电话咨询</a>
+          <a href="/contact" class="btn btn-outline">在线留言</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    padding: 160px 0 80px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
+  }
+
+  .page-header h1 {
+    font-size: 56px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+  }
+
+  .page-header p {
+    color: var(--gray);
+    font-size: 18px;
+  }
+
+  .faq-section {
+    background: var(--dark-2);
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .faq-item {
+    background: var(--dark);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--dark-3);
+    transition: all 0.3s;
+  }
+
+  .faq-item:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .faq-number {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--dark);
+    font-weight: 900;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    flex-shrink: 0;
+  }
+
+  .faq-question h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .faq-answer {
+    padding-left: 45px;
+  }
+
+  .faq-answer p {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faq-cta {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,220,0,0.1), rgba(255,51,102,0.1));
+    border-radius: 30px;
+    padding: 60px 40px;
+    border: 1px solid rgba(255,220,0,0.2);
+  }
+
+  .faq-cta h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+
+  .faq-cta p {
+    color: var(--gray);
+    margin-bottom: 30px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: var(--dark);
+  }
+
+  .btn-primary:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+  }
+
+  .btn-outline {
+    border: 2px solid var(--light);
+    color: var(--light);
+  }
+
+  .btn-outline:hover {
+    background: var(--light);
+    color: var(--dark);
+  }
+
+  @media (max-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+      font-size: 36px;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

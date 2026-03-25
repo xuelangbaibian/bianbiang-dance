@@ -1,0 +1,274 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('news');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
+};
+
+const categoryColors: Record<string, string> = {
+  '艺考政策': '#FFDC00',
+  '舞蹈知识': '#00D4FF',
+  '赛事资讯': '#FF3366',
+  '艺考指南': '#9B59B6',
+  '家长指南': '#2ECC71'
+};
+---
+
+<Layout title={`${post.data.title} - 百变街舞资讯`} description={post.data.description}>
+  <div class="page-header">
+    <div class="container">
+      <a href="/news" class="back-link">← 返回资讯</a>
+      <span class="news-category" style={`background: ${categoryColors[post.data.category] || '#FFDC00'}`}>
+        {post.data.category}
+      </span>
+      <h1>{post.data.title}</h1>
+      <div class="news-meta">
+        <span>{formatDate(post.data.pubDate)}</span>
+        <span>•</span>
+        <span>{post.data.author}</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section article-section">
+    <div class="container">
+      <article class="article-content">
+        <Content />
+      </article>
+
+      <div class="article-tags">
+        {post.data.tags.map((tag) => (
+          <span class="tag">#{tag}</span>
+        ))}
+      </div>
+
+      <div class="article-cta">
+        <h2>想让孩子学习街舞吗？</h2>
+        <p>百变街舞提供免费试课，欢迎带孩子来体验！</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">立即咨询</a>
+          <a href="/courses" class="btn btn-outline">查看课程</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    padding: 140px 0 60px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+  }
+
+  .back-link:hover {
+    color: var(--primary);
+  }
+
+  .news-category {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 20px;
+  }
+
+  .page-header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.3;
+  }
+
+  .news-meta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: var(--gray);
+    font-size: 14px;
+  }
+
+  .article-section {
+    background: var(--dark-2);
+  }
+
+  .article-content {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    background: var(--dark);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid var(--dark-3);
+  }
+
+  .article-content :global(h1) {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: var(--primary);
+  }
+
+  .article-content :global(h2) {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 40px 0 20px;
+  }
+
+  .article-content :global(h3) {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 30px 0 15px;
+  }
+
+  .article-content :global(p) {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gray);
+    margin-bottom: 20px;
+  }
+
+  .article-content :global(ul),
+  .article-content :global(ol) {
+    margin: 20px 0;
+    padding-left: 25px;
+  }
+
+  .article-content :global(li) {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gray);
+    margin-bottom: 10px;
+  }
+
+  .article-content :global(strong) {
+    color: var(--light);
+    font-weight: 700;
+  }
+
+  .article-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  .article-content :global(th),
+  .article-content :global(td) {
+    padding: 12px 15px;
+    border: 1px solid var(--dark-3);
+    text-align: left;
+  }
+
+  .article-content :global(th) {
+    background: var(--dark-2);
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .article-tags {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 14px;
+    color: var(--secondary);
+  }
+
+  .article-cta {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,220,0,0.1), rgba(255,51,102,0.1));
+    border-radius: 30px;
+    padding: 60px 40px;
+    border: 1px solid rgba(255,220,0,0.2);
+  }
+
+  .article-cta h2 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+
+  .article-cta p {
+    color: var(--gray);
+    margin-bottom: 30px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: var(--dark);
+  }
+
+  .btn-primary:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+  }
+
+  .btn-outline {
+    border: 2px solid var(--light);
+    color: var(--light);
+  }
+
+  .btn-outline:hover {
+    background: var(--light);
+    color: var(--dark);
+  }
+
+  @media (max-width: 768px) {
+    .article-content {
+      padding: 30px 20px;
+    }
+
+    .page-header h1 {
+      font-size: 28px;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
