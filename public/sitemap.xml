@@ -56,31 +56,40 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- 博客文章1 -->
+  <!-- 博客文章 -->
   <url>
-    <loc>https://www.baibiandance.com/blog/kids-dance-benefits/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://www.baibiandance.com/blog/bao-bao-jie-ban-qian-5-jian-shi/</loc>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- 博客文章2 -->
   <url>
-    <loc>https://www.baibiandance.com/blog/dance-competition-prep/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://www.baibiandance.com/blog/choose-dance-school/</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- 博客文章3 -->
   <url>
-    <loc>https://www.baibiandance.com/blog/hiphop-basics/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://www.baibiandance.com/blog/hiphop-vs-jazz/</loc>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- 博客文章4 -->
   <url>
-    <loc>https://www.baibiandance.com/blog/dance-school-choice/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://www.baibiandance.com/blog/jie-wu-kao-ji-you-yong-ma/</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.baibiandance.com/blog/kids-street-dance-guide/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.baibiandance.com/blog/xue-ling-jie-zui-hao/</loc>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -98,23 +107,63 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- 新闻详情1 -->
+  <!-- 新闻详情 -->
   <url>
-    <loc>https://www.baibiandance.com/news/2026-spring-competition/</loc>
+    <loc>https://www.baibiandance.com/news/2026-03-21-01/</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <!-- 新闻详情2 -->
   <url>
-    <loc>https://www.baibiandance.com/news/dance-grade-exam/</loc>
+    <loc>https://www.baibiandance.com/news/2026-03-21-02/</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <!-- 新闻详情3 -->
   <url>
-    <loc>https://www.baibiandance.com/news/summer-camp-2026/</loc>
+    <loc>https://www.baibiandance.com/news/2026-03-21-03/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baibiandance.com/news/2026-03-21-04/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baibiandance.com/news/2026-03-21-05/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baibiandance.com/news/2026-03-21-06/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baibiandance.com/news/2026-03-21-07/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baibiandance.com/news/2026-03-21-08/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baibiandance.com/news/2026-03-21-09/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.baibiandance.com/news/2026-03-21-10/</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>

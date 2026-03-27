@@ -148,6 +148,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"choose-dance-school.md": {
+	id: "choose-dance-school.md";
+  slug: "choose-dance-school";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "hiphop-vs-jazz.md": {
 	id: "hiphop-vs-jazz.md";
   slug: "hiphop-vs-jazz";
@@ -158,6 +165,13 @@ declare module 'astro:content' {
 "jie-wu-kao-ji-you-yong-ma.md": {
 	id: "jie-wu-kao-ji-you-yong-ma.md";
   slug: "jie-wu-kao-ji-you-yong-ma";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"kids-street-dance-guide.md": {
+	id: "kids-street-dance-guide.md";
+  slug: "kids-street-dance-guide";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
