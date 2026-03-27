@@ -1,39 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 首页 -->
   <url>
-    <loc>http://www.baibiandance.com/</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.baibiandance.com/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- 课程页面 -->
   <url>
-    <loc>http://www.baibiandance.com/courses/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://www.baibiandance.com/courses/</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- 教师团队 -->
   <url>
-    <loc>http://www.baibiandance.com/teachers/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://www.baibiandance.com/teachers/</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- 荣誉资质 -->
   <url>
-    <loc>http://www.baibiandance.com/honors/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://www.baibiandance.com/honors/</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- 关于我们 -->
   <url>
-    <loc>http://www.baibiandance.com/about/</loc>
+    <loc>https://www.baibiandance.com/about/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 联系方式 -->
+  <url>
+    <loc>https://www.baibiandance.com/contact/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- FAQ页面 -->
+  <url>
+    <loc>https://www.baibiandance.com/faq/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 博客列表 -->
+  <url>
+    <loc>https://www.baibiandance.com/blog/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 博客文章1 -->
+  <url>
+    <loc>https://www.baibiandance.com/blog/kids-dance-benefits/</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- 博客文章2 -->
   <url>
-    <loc>http://www.baibiandance.com/contact/</loc>
+    <loc>https://www.baibiandance.com/blog/dance-competition-prep/</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 博客文章3 -->
+  <url>
+    <loc>https://www.baibiandance.com/blog/hiphop-basics/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 博客文章4 -->
+  <url>
+    <loc>https://www.baibiandance.com/blog/dance-school-choice/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 评价页面 -->
+  <url>
+    <loc>https://www.baibiandance.com/reviews/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <!-- 新闻列表 -->
+  <url>
+    <loc>https://www.baibiandance.com/news/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 新闻详情1 -->
+  <url>
+    <loc>https://www.baibiandance.com/news/2026-spring-competition/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- 新闻详情2 -->
+  <url>
+    <loc>https://www.baibiandance.com/news/dance-grade-exam/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- 新闻详情3 -->
+  <url>
+    <loc>https://www.baibiandance.com/news/summer-camp-2026/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
